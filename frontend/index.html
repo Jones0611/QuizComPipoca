@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz com Pipoca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <h1>Quiz com Pipoca</h1>
+                <div class="popcorn-icon">🍿</div>
+            </div>
+            <div class="timer" id="timer">4:47</div>
+        </div>
+        
+        <!-- Tela inicial -->
+        <div id="start-screen" class="screen active">
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <h2>Desafio Cinematográfico</h2>
+                    <p>Teste seu conhecimento sobre cinema com perguntas aleatórias. Cada jogo é uma experiência única.</p>
+                    
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="total-games">0</div>
+                            <div class="stat-label">Partidas Jogadas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="best-score">R$ 0</div>
+                            <div class="stat-label">Melhor Pontuação</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="correct-answers">0%</div>
+                            <div class="stat-label">Taxa de Acerto</div>
+                        </div>
+                    </div>
+                </div>
+                <button id="start-btn" class="btn start-btn">INICIAR DESAFIO</button>
+            </div>
+        </div>
+        
+        <!-- Tela do jogo -->
+        <div id="game-screen" class="screen">
+            <div class="game-content">
+                <div class="prizes-container">
+                    <div class="prizes-title">PRÉMIOS</div>
+                    <div class="prizes-list">
+                        <div class="prize" id="prize-15">R$ 1.000.000</div>
+                        <div class="prize" id="prize-14">R$ 500.000</div>
+                        <div class="prize" id="prize-13">R$ 250.000</div>
+                        <div class="prize" id="prize-12">R$ 125.000</div>
+                        <div class="prize" id="prize-11">R$ 64.000</div>
+                        <div class="prize" id="prize-10">R$ 32.000</div>
+                        <div class="prize" id="prize-9">R$ 16.000</div>
+                        <div class="prize" id="prize-8">R$ 8.000</div>
+                        <div class="prize" id="prize-7">R$ 4.000</div>
+                        <div class="prize" id="prize-6">R$ 2.000</div>
+                        <div class="prize" id="prize-5">R$ 1.000</div>
+                        <div class="prize" id="prize-4">R$ 500</div>
+                        <div class="prize" id="prize-3">R$ 300</div>
+                        <div class="prize" id="prize-2">R$ 200</div>
+                        <div class="prize" id="prize-1">R$ 100</div>
+                    </div>
+                </div>
+                
+                <div class="question-area">
+                    <div class="question-header">
+                        <div class="question-number" id="question-number">PERGUNTA 1/15</div>
+                        <div class="difficulty" id="difficulty">FÁCIL</div>
+                    </div>
+                    
+                    <div class="question-container">
+                        <div class="question" id="question-text">Carregando pergunta...</div>
+                        
+                        <div class="options-grid" id="options-container">
+                            <!-- Opções carregadas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="lifelines">
+                        <button id="fifty-fifty" class="lifeline">
+                            <span class="lifeline-icon">50:50</span>
+                            <span class="lifeline-text">Eliminar 2 erradas</span>
+                        </button>
+                        <button id="walk-away" class="btn walk-away">PARAR E GARANTIR PRÉMIO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tela de resultado -->
+        <div id="result-screen" class="screen">
+            <div class="result-content">
+                <div class="result-icon" id="result-icon">🎬</div>
+                <div class="result" id="result-message">Fim de Jogo</div>
+                <div class="money" id="prize-won">R$ 0</div>
+                <div class="result-details">
+                    <p id="result-details">Carregando estatísticas...</p>
+                </div>
+                <button id="play-again-btn" class="btn play-again-btn">JOGAR NOVAMENTE</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
